@@ -1,0 +1,68 @@
+package Lamp
+
+// STDLib
+import Assets
+import UnitObjEditing
+import LinkedList
+import ObjectIds
+
+// Local imports
+import LocalObjectIDs
+import SkullBuildingDefinition
+import SkullUnit
+
+//=============================================================
+// Unit definition
+//=============================================================
+
+class LampDefinition extends SkullBuildingDefinition
+    
+    construct( int unitId )
+        super( unitId, UnitIds.farm )
+        train    = "Build a"
+        name     = "Lamp"
+        hotkey   = "L"
+        desc     = "Basic scouting bulding"
+        features = asList( "Provides great vision at night" )
+        upgrades = commaList( BUILDING_TORCH )
+        this.setDefault()
+        this.setModelFile("Doodads/Cityscape/Props/LanternPost/LanternPost.mdx")
+        this.setIconGameInterface("ReplaceableTextures/CommandButtons/BTNLamp.blp")
+        this.setPathingMap("PathTextures/2x2Default.tga")
+        this.setScalingValue(0.75)
+        this.setSelectionScale(0.7)
+        this.setButtonPositionX(0)
+        this.setButtonPositionY(2)
+        this.setCollisionSize(32)
+        this.setBuildTime(1)
+        this.setGoldCost(0)
+        this.setLumberCost(0)
+        this.setSightRadiusDay(900)
+        this.setSightRadiusNight(800)
+        this.setHitPointsMaximumBase(100)
+
+@compiletime function generate()
+    new LampDefinition( BUILDING_LAMP )        
+
+//=============================================================
+// Chicken class
+//=============================================================
+
+public class Lamp extends SkullUnit
+
+    //=============================================================
+    // Constructor
+    //=============================================================
+
+    construct( unit unitID )
+        super( unitID )
+
+    static function initialize()
+        register( BUILDING_LAMP, unitID -> new Lamp( unitID ) )
+    
+//=============================================================
+// Initialisation
+//=============================================================
+init
+    Lamp.initialize()
+    

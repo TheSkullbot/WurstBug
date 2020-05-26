@@ -1,0 +1,28 @@
+package Tent
+
+// STDLib
+import Assets
+import UnitObjEditing
+import LinkedList
+import ObjectIds
+
+// Local imports
+import LocalObjectIDs
+
+//=============================================================
+// Unit definition
+//=============================================================
+
+class TentDefinition extends BuildingDefinition
+    
+    construct( int unitId )
+        super( unitId, UnitIds.farm )
+        this.setName("Tent")
+        this.setTooltipBasic( "Build a Tent" )
+        this.setModelFile("buildings/other/Tent1/Tent1.mdx")
+        this.setIconGameInterface("ReplaceableTextures/CommandButtons/BTNTent1.blp")
+        this.setPathingMap("PathTextures/4x4Default.tga")
+        this.setRequirements( commaList( BUILDING_CAMPFIRE ) ) // Removing this requirement also fix the crash
+
+@compiletime function generate()
+    new TentDefinition( BUILDING_TENT )

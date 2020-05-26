@@ -1,0 +1,23 @@
+2020-04-01 00:12:50 [main] DEBUG file.SetupApp - path: file:/C:/Users/Skullbot/Downloads/WurstSetup.jar 
+2020-04-01 00:12:50 [main] DEBUG file.SetupApp - file: C:\Users\Skullbot\Downloads\WurstSetup.jar 
+2020-04-01 00:12:50 [main] DEBUG file.SetupApp - copy jar 
+2020-04-01 00:12:50 [main] INFO  file.SetupApp - ? No arguments found. Launching Wurst Setup GUI.. 
+2020-04-01 00:12:50 [AWT-EventQueue-0] DEBUG ui.MainWindow - init UI 
+2020-04-01 00:12:51 [AWT-EventQueue-0] WARN  ui.MainWindow - Didn't find warcraft installation. 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-3] DEBUG workers.OnlineCheckWorker - check connectivity 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-1] DEBUG workers.OnlineCheckWorker - check connectivity 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-2] DEBUG workers.OnlineCheckWorker - check connectivity 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-1] DEBUG workers.OnlineCheckWorker - check build 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-2] DEBUG workers.OnlineCheckWorker - check build 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-4] DEBUG net.ConnectionManager - checking wurst build 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-4] DEBUG global.InstallationManager - verify Install 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-4] DEBUG global.InstallationManager - Found installation 
+2020-04-01 00:12:51 [SwingWorker-pool-2-thread-4] DEBUG global.CLIParser - running wurst to extract the version 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG global.CLIParser - parsing CMD output 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG global.CLIParser - Found jenkins build string 1.8.1.0-jenkins-Wurst-1244 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG global.InstallationManager - Client online, check for update 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG net.ConnectionManager - getting latest compiler build 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-3] DEBUG workers.OnlineCheckWorker - check build 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG global.InstallationManager - latest compiler: 1244 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG net.ConnectionManager - getting latest setup build 
+2020-04-01 00:12:52 [SwingWorker-pool-2-thread-4] DEBUG workers.WurstBuildCheckWorker - current setup ver: 143 latest Setup: 143 

@@ -1,0 +1,4 @@
+wurst.dependencies
+.vscode/settings.json
+_build/*.w3x
+latest.w3x

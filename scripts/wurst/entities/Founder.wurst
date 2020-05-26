@@ -1,0 +1,45 @@
+package Founder
+
+// STDLib
+import Assets
+import UnitObjEditing
+import LinkedList
+import ObjectIds
+
+// Local imports
+import LocalObjectIDs
+
+//=============================================================
+// Unit definition
+//=============================================================
+
+class FounderDefinition extends HeroDefinition
+    
+    constant name      = "Founder"
+    constant hotkey    = "F"
+    constant abilities = commaList( AbilityIds.repairHuman )
+    constant built     = commaList( BUILDING_CAMPFIRE, BUILDING_TENT )
+
+    construct( int unitId )
+        super( unitId, UnitIds.paladin )
+        this.setName( name )
+        this.setHotkey( hotkey )
+        this.setStructuresBuilt( built )
+        this.setNormalAbilities( abilities )
+        this.setModelFile( Units.highElfPeasant1 )
+        this.setIconGameInterface( Icons.bTNElfVillager )
+
+@compiletime function generate()
+    new FounderDefinition( UNIT_FOUNDER )
+
+//=============================================================
+// Initialisation
+//=============================================================
+
+init
+    // Spawn a Founder foreach player
+    for playerIndex = 0 to ( PLAYER_NEUTRAL_AGGRESSIVE - 1 )
+        let whichPlayer = playerFromIndex(playerIndex)
+        if( whichPlayer.getSlotState() == PLAYER_SLOT_STATE_PLAYING and not IsPlayerObserver( whichPlayer ) )			
+            createUnit( whichPlayer, UNIT_FOUNDER, whichPlayer.getStartLocation(), (270.0).asAngleDegrees() )
+            

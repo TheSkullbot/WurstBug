@@ -1,0 +1,23 @@
+package LocalObjectIDs
+
+// Standard library imports
+import ObjectIDManager
+import ObjectIdGenerator
+
+//========================================
+// Heroes
+//========================================
+
+public let UNIT_FOUNDER = compiletime( HERO_ID_GEN.next() )..registerObjectID( "UNIT_FOUNDER" )
+
+//========================================
+// Buildings
+//========================================
+
+public let BUILDING_TENT        = compiletime( UNIT_ID_GEN.next() )..registerObjectID( "UNIT_BUILDING_TENT" )
+public let BUILDING_CAMPFIRE    = compiletime( UNIT_ID_GEN.next() )..registerObjectID( "UNIT_BUILDING_CAMPFIRE" )
+public let BUILDING_LAMP        = compiletime( UNIT_ID_GEN.next() )..registerObjectID( "UNIT_BUILDING_LAMP" )
+
+//========================================
+// Placeholders
+//========================================

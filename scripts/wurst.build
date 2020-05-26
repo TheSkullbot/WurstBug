@@ -1,0 +1,14 @@
+---
+projectName: FoundersReforged
+dependencies:
+- https://github.com/wurstscript/wurstStdlib2
+- https://github.com/theQuazz/wurst-lodash
+buildMapData:
+  name: Test
+  fileName: latest
+  author: Skullbot
+  scenarioData:
+    description: TODO
+    suggestedPlayers: 2+
+  optionsFlags:
+    hideMinimapPreview: true

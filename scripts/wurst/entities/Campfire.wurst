@@ -1,0 +1,29 @@
+package Campfire
+
+// STDLib
+import Assets
+import UnitObjEditing
+import LinkedList
+import ObjectIds
+
+// Local imports
+import LocalObjectIDs
+
+//=============================================================
+// Unit definition
+//=============================================================
+
+class CampfireDefinition extends BuildingDefinition
+    
+    construct( int unitId )
+        super( unitId, UnitIds.farm )
+        this.setName("Campfire")
+        this.setTooltipBasic( "Build a Campfire" )
+        this.setModelFile("Doodads/Northrend/Props/FirePit/FirePit.mdx")
+        this.setIconGameInterface("ReplaceableTextures/CommandButtons/BTNFire.blp")
+        this.setPathingMap("PathTextures/2x2Default.tga")
+        this.setUpgradesTo( commaList( BUILDING_LAMP ) )
+
+@compiletime function generate()
+    new CampfireDefinition( BUILDING_CAMPFIRE )
+    

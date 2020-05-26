@@ -1,0 +1,28 @@
+package Lamp
+
+// STDLib
+import Assets
+import UnitObjEditing
+import LinkedList
+import ObjectIds
+
+// Local imports
+import LocalObjectIDs
+
+//=============================================================
+// Unit definition
+//=============================================================
+
+class LampDefinition extends BuildingDefinition
+    
+    construct( int unitId )
+        super( unitId, UnitIds.farm )
+        this.setName("Lamp")
+        this.setTooltipBasic( "Build a Lamp" )
+        this.setModelFile("Doodads/Cityscape/Props/LanternPost/LanternPost.mdx")
+        this.setIconGameInterface("ReplaceableTextures/CommandButtons/BTNLamp.blp")
+        this.setPathingMap("PathTextures/2x2Default.tga")
+        this.setUpgradesTo( commaList( BUILDING_CAMPFIRE ) ) // Removing this upgrade fix the crash too
+
+@compiletime function generate()
+    new LampDefinition( BUILDING_LAMP )
